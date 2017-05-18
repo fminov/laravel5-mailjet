@@ -72,7 +72,7 @@ class MailjetServiceProvider extends ServiceProvider {
         $mailer->setContainer($app);
 
         if ($app->bound('queue')) {
-            $mailer->setQueue($app['queue']);
+            $mailer->setQueue($app['queue.connection']);
         }
     }
 

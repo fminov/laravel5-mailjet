@@ -90,11 +90,11 @@ class MailjetTransport extends Transport
             ];
         }
 
-        $this->client->post($this->url, $options);
+        return $this->client->post($this->url, $options);
 
-        $this->sendPerformed($message);
+        //$this->sendPerformed($message);
 
-        return $this->numberOfRecipients($message);
+        //return $this->numberOfRecipients($message);
     }
 
     /**
